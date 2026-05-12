@@ -1,0 +1,81 @@
+# ============================================================
+# FreeWhisper .gitignore
+# ============================================================
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---- Virtual environments ----
+venv/
+.venv/
+env/
+ENV/
+.env
+
+# ---- Build artifacts ----
+build/
+dist/
+*.app/
+*.dmg
+*.pkg
+
+# ---- macOS ----
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.TemporaryItems
+
+# ---- Editor / IDE ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.cursor/
+.claude/
+
+# ---- FreeWhisper runtime data (never commit user data) ----
+# Local user data should never be in the repo. Users' personal
+# glossaries, voice recordings, and transcription logs are private.
+.freewhisper/
+freewhisper.db
+freewhisper.log
+audio/
+glossary.txt
+*.wav
+
+# ---- Model cache (huge files, not source) ----
+.cache/
+models/
+*.safetensors
+*.bin
+*.gguf
+
+# ---- Logs / temp ----
+*.log
+/tmp/
+.temp/
+
+# ---- Secrets (just in case) ----
+.env.local
+.env.*.local
+secrets.json
+credentials.json
+*.pem
+*.key

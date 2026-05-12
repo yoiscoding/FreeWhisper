@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussions
+    url: https://github.com/yoiscoding/FreeWhisper/discussions
+    about: Have a question or want to share how you use FreeWhisper? Start a discussion.
+  - name: 📖 Documentation
+    url: https://github.com/yoiscoding/FreeWhisper#readme
+    about: Check the README — your question may already be answered there.

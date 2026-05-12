@@ -1,0 +1,45 @@
+name: ✨ Feature request
+description: Suggest an improvement or new capability
+title: "[Feature]: "
+labels: ["enhancement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing an idea. Focus on the *problem* you're trying to solve — sometimes there's a simpler solution than the one you have in mind.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: What's the actual pain point in your workflow?
+      placeholder: |
+        I dictate a lot of code, and Whisper keeps misspelling function names
+        like `useCallback`. Adding them to the glossary helps a bit, but I
+        wish there was a faster way to add the last transcribed word.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: What solution do you have in mind?
+      description: Optional — describe how you'd solve it. Don't worry if you don't have a clean idea.
+      placeholder: |
+        Maybe a menu item "Add last word to glossary" that opens the
+        last transcript and lets me click a word to add.
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Have you considered alternatives?
+      description: What else could solve this?
+      placeholder: |
+        I could just edit glossary.txt manually, but it's slower.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else?
+      description: Screenshots, links to similar features in other apps, related issues, etc.

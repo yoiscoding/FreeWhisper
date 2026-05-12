@@ -1,0 +1,95 @@
+name: 🐛 Bug report
+description: Something isn't working as expected
+title: "[Bug]: "
+labels: ["bug", "triage"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. The more info you fill in, the faster we can fix it.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, and what went wrong?
+      placeholder: |
+        I held Right Option and spoke, but nothing appeared at my cursor.
+        The 🎙️ icon never turned 🔴.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      placeholder: |
+        Text should have appeared at my cursor within a few seconds.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Launch FreeWhisper from /Applications
+        2. Open Notes
+        3. Hold Right Option for 3 seconds while speaking
+        4. Release Right Option
+        5. Wait — nothing happens
+    validations:
+      required: true
+
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+      description: Find via System Settings → General → About, or run `sw_vers -productVersion` in Terminal
+      placeholder: e.g. 14.4.1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: mac-chip
+    attributes:
+      label: Mac chip
+      options:
+        - Apple Silicon (M1)
+        - Apple Silicon (M2)
+        - Apple Silicon (M3)
+        - Apple Silicon (M4)
+        - Intel (not supported — please confirm)
+    validations:
+      required: true
+
+  - type: input
+    id: python-version
+    attributes:
+      label: Python version
+      description: Run `python3 --version` in Terminal
+      placeholder: e.g. 3.13.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: log
+    attributes:
+      label: Log output
+      description: |
+        Paste the contents of `/tmp/freewhisper.log` if it exists.
+        Get it with: `cat /tmp/freewhisper.log | tail -50`
+      render: shell
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission checklist
+      options:
+        - label: I granted Accessibility permission to FreeWhisper (or Terminal, if running from source)
+          required: true
+        - label: I granted Microphone permission to FreeWhisper
+          required: true
+        - label: I searched existing issues and didn't find a duplicate
+          required: true
