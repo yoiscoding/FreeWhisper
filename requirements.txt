@@ -1,0 +1,21 @@
+# FreeWhisper dependencies
+# Tested on macOS 13+ Apple Silicon with Python 3.10–3.13
+#
+# We pin minimum versions known to work, allowing patch updates for
+# security fixes. If something breaks after a pip upgrade, please open
+# an issue with your `pip freeze` output.
+
+# Core transcription
+mlx-whisper>=0.4.0
+mlx>=0.20.0
+
+# Audio capture
+sounddevice>=0.4.6
+numpy>=1.24.0
+
+# Hotkey + clipboard
+pynput>=1.7.6
+pyperclip>=1.8.2
+
+# Menu bar app
+rumps>=0.4.0
